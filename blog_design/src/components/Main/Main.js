@@ -1,12 +1,17 @@
 import React from 'react';
 import Articulos from './../Articulos/Articulos';
+import Categorias from './../Categorias/Categorias';
 
 const Main = () => {
     return (
-        <main className="contenido-principal">
-            <h2>Últimas Entradas</h2>
-            <Articulos/>
-        </main>
+        <div className="contenedor">
+            <main className="contenido-principal">
+                <h2>Últimas Entradas</h2>
+                <Articulos/>
+            </main>
+            <Categorias/>
+        </div>
+        
     );
 }
  

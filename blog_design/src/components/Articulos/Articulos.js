@@ -32,41 +32,41 @@ const Articulos = () => {
 
             <article className="entrada">
                 <img src={img3} alt="texto entrada"/>
-                <div class="contenido">
+                <div className="contenido">
                     <h3>El equipo necesario para tomar las mejores fotografías</h3>
                     <p>Publicado el: <span>19 Julio, 2018</span></p>
                     <p>Por: <span>Blog Viajes</span></p>
-                    <a href="/" class="boton"> Leer más</a>
+                    <a href="/" className="boton"> Leer más</a>
                 </div>
             </article>
 
             <article className="entrada">
                 <img src={img4} alt="texto entrada"/>
-                <div class="contenido">
+                <div className="contenido">
                     <h3>Checklist para tu próximo viaje</h3>
                     <p>Publicado el: <span>19 Julio, 2018</span></p>
                     <p>Por: <span>Blog Viajes</span></p>
-                    <a href="/" class="boton"> Leer más</a>
+                    <a href="/" className="boton"> Leer más</a>
                 </div>
             </article>
 
             <article className="entrada">
                 <img src={img5} alt="texto entrada"/>
-                <div class="contenido">
+                <div className="contenido">
                     <h3>Los mejores lugares para visitar este otoño</h3>
                     <p>Publicado el: <span>19 Julio, 2018</span></p>
                     <p>Por: <span>Blog Viajes</span></p>
-                    <a href="/" class="boton"> Leer más</a>
+                    <a href="/" className="boton"> Leer más</a>
                 </div>
             </article>
 
             <article className="entrada">
                 <img src={img6} alt="texto entrada"/>
-                <div class="contenido">
+                <div className="contenido">
                     <h3>Los mejores lugares para visitar con montañas</h3>
                     <p>Publicado el: <span>19 Julio, 2018</span></p>
                     <p>Por: <span>Blog Viajes</span></p>
-                    <a href="/" class="boton"> Leer más</a>
+                    <a href="/" className="boton"> Leer más</a>
                 </div>
             </article>
 

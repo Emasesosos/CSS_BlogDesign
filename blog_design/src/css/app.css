@@ -9,5 +9,367 @@ html {
 }
 
 body {
-  background-color: gray;
+  box-sizing: border-box;
+  background-color: #f2f2f2;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.contenedor {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+h2 {
+  flex: 0 1 100%;
+  text-align: center;
+  font-size: 1.6rem;
+}
+
+h3 {
+  font-family: "Libre Baskerville", serif;
+  margin: 0;
+  font-weight: 700;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* ***** Header ***** */
+.header {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.header .barra {
+  position: absolute;
+  background-color: #008fd1;
+  width: 100%;
+  top: 1rem;
+  padding: 1rem 0;
+}
+
+.header .barra .contenedor {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  .header .barra .contenedor {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: 768px) {
+  .header .barra .navegacion {
+    flex: 0 0 25rem;
+  }
+}
+
+.header .header-contenido h1 {
+  color: #008fd1;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  max-width: 28rem;
+}
+
+.navegacion ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+}
+
+@media (min-width: 768px) {
+  .navegacion ul {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.navegacion ul li a {
+  color: #FFFFFF;
+  text-decoration: none;
+  font-size: 1.2rem;
+}
+
+.logo,
+.navegacion {
+  text-align: center;
+}
+
+.logo .logo-img,
+.navegacion .logo-img {
+  max-width: 20rem;
+}
+
+.hero {
+  background-image: url("./../img/hero.jpg");
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+  /* Imagen Fija */
+}
+
+/* ***** Contenido ***** */
+.contenido {
+  background-color: #FFFFFF;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  padding: 1rem;
+  text-align: center;
+}
+
+.contenido h3 {
+  text-align: center;
+  font-size: .9rem;
+  line-height: 1.4rem;
+}
+
+.contenido span {
+  color: #db008d;
+}
+
+.contenido .boton {
+  background-color: #008fd1;
+  color: #FFFFFF;
+  display: block;
+  width: 100%;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  padding: 1rem 0;
+  border: #008fd1 solid 2px;
+}
+
+.contenido .boton:hover {
+  background-color: #FFFFFF;
+  color: #008fd1;
+  display: block;
+  width: 100%;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  padding: 1rem 0;
+  border: #008fd1 solid 2px;
+}
+
+@media (min-width: 480px) {
+  .contenido-principal {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+}
+
+@media (min-width: 480px) {
+  .entrada {
+    flex: 0 1 calc(50% - 1rem);
+  }
+}
+
+@media (min-width: 768px) {
+  .entrada {
+    flex: 0 1 calc(33% - 1rem);
+  }
+}
+
+.categorias ul {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  list-style: none;
+}
+
+.categorias ul li {
+  flex: 1 0 calc(50%);
+  padding: 2rem;
+}
+
+@media (min-width: 768px) {
+  .categorias ul li {
+    flex: 1;
+  }
+}
+
+.categorias ul li i {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.categorias ul li:nth-child(1) {
+  background-color: #008fd1;
+  border: #008fd1 2px solid;
+  transition: background-color 1s ease;
+}
+
+.categorias ul li:nth-child(1):hover {
+  background-color: #FFFFFF;
+  border: #008fd1 2px solid;
+}
+
+.categorias ul li:nth-child(1):hover a {
+  color: #008fd1;
+}
+
+.categorias ul li:nth-child(2) {
+  background-color: #db008d;
+  border: #db008d 2px solid;
+  transition: background-color 1s ease;
+}
+
+.categorias ul li:nth-child(2):hover {
+  background-color: #FFFFFF;
+  border: #db008d 2px solid;
+}
+
+.categorias ul li:nth-child(2):hover a {
+  color: #db008d;
+}
+
+.categorias ul li:nth-child(3) {
+  background-color: #9800d1;
+  border: #9800d1 2px solid;
+  transition: background-color 1s ease;
+}
+
+.categorias ul li:nth-child(3):hover {
+  background-color: #FFFFFF;
+  border: #9800d1 2px solid;
+}
+
+.categorias ul li:nth-child(3):hover a {
+  color: #9800d1;
+}
+
+.categorias ul li:nth-child(4) {
+  background-color: #eca300;
+  border: #eca300 2px solid;
+  transition: background-color 1s ease;
+}
+
+.categorias ul li:nth-child(4):hover {
+  background-color: #FFFFFF;
+  border: #eca300 2px solid;
+}
+
+.categorias ul li:nth-child(4):hover a {
+  color: #eca300;
+}
+
+.categorias ul li a {
+  color: #FFFFFF;
+  font-size: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+}
+
+/* ***** Footer ***** */
+.footer {
+  background-color: #008fd1;
+  padding-top: 1rem;
+  color: #FFFFFF;
+}
+
+.footer h2 {
+  text-transform: uppercase;
+}
+
+@media (min-width: 768px) {
+  .footer .contenedor {
+    display: flex;
+  }
+}
+
+.footer .entradas li {
+  list-style: none;
+  text-align: center;
+  margin-bottom: .5rem;
+}
+
+.footer .entradas li a {
+  text-decoration: none;
+}
+
+.footer .entradas li a span {
+  color: #FFFFFF;
+}
+
+.footer .entradas li a:hover {
+  text-decoration: underline;
+  text-decoration-color: #FFFFFF;
+  background-color: #f2f2f2;
+  border-radius: 5px;
+  padding: .5rem .5rem;
+}
+
+.footer .entradas li a:hover span {
+  color: #008fd1;
+}
+
+@media (min-width: 768px) {
+  .footer .caja {
+    flex: 1px;
+  }
+}
+
+.footer .copyright {
+  background-color: #004d70;
+  margin: 2rem 0 0 0;
+  padding: 1rem 0;
+  text-align: center;
+}
+
+.sociales ul {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+}
+
+.sociales ul li {
+  margin-right: 1rem;
+}
+
+.sociales ul li a {
+  text-decoration: none;
+}
+
+.sociales ul li span {
+  display: none;
+}
+
+.sociales ul li a:before {
+  color: #FFFFFF;
+  font-family: "Font Awesome 5 Brands";
+  font-size: 2rem;
+}
+
+.sociales ul li a[href*='facebook.com']::before {
+  content: "\f39e";
+}
+
+.sociales ul li a[href*='twitter.com']::before {
+  content: "\f099";
+}
+
+.sociales ul li a[href*='youtube.com']::before {
+  content: "\f167";
+}
+
+.sociales ul li a[href*='instagram.com']::before {
+  content: "\f16d";
+}
+
+.sociales ul li a[href*='pinterest.com']::before {
+  content: "\f0d2";
 }

@@ -9,5 +9,300 @@ html {
 }
 
 body {
-    background-color: gray; 
+    @include box-sizing(border-box);
+    background-color: $gris;
+    font-family: $fuentePrincipal;
+}
+
+.contenedor {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+h2 {
+    flex: 0 1 100%;
+    text-align: center;
+    font-size: 1.6rem;
+}
+
+h3 {
+    font-family: $fuenteSecundaria;
+    margin: 0;
+    font-weight: 700;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* ***** Header ***** */
+.header {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    .barra {
+        position: absolute;
+        background-color: $terciario;
+        width: 100%;
+        top: 1rem;
+        padding: 1rem 0;
+        .contenedor {
+            display: flex;
+            flex-direction: column;
+            @include tablet {
+                flex-direction: row;
+                justify-content: space-between;
+            }
+        }
+        .navegacion {
+            @include tablet {
+                flex: 0 0 25rem;
+            }
+        }
+    }
+    .header-contenido {
+        h1 {
+            color: $terciario;
+            font-size: 2.5rem;
+            text-transform: uppercase;
+            max-width: 28rem;
+        }
+    }
+}
+
+.navegacion ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    @include tablet {
+        flex-direction: row;
+        justify-content: space-between; 
+    }
+    li {
+        a {
+            color: $blanco;
+            text-decoration: none;
+            font-size: 1.2rem;
+        }
+    }
+}
+
+.logo,
+.navegacion {
+    text-align: center;
+    .logo-img {
+        max-width: 20rem;
+    }
+}
+
+
+
+.hero {
+    background-image: url('./../img/hero.jpg');
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed; /* Imagen Fija */
 } 
+
+/* ***** Contenido ***** */
+.contenido {
+    background-color: $blanco;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    padding: 1rem;
+    text-align: center;
+    h3 {
+        text-align: center;
+        font-size: .9rem;
+        line-height: 1.4rem;
+    }
+    span {
+        color: #db008d;
+    }
+    .boton {
+        @include boton($primario);
+        &:hover {
+            @include botonHover($primario);
+        }
+    }
+}
+
+.contenido-principal {
+    @include telefono {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+}
+
+.entrada {
+    @include telefono {
+        flex: 0 1 calc(50% - 1rem);
+    }
+    @include tablet {
+        flex: 0 1 calc(33% - 1rem);
+    }
+}
+
+.categorias ul {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    list-style: none;
+    li {
+        flex: 1 0 calc(50%);
+        padding: 2rem;
+        @include tablet {
+            flex: 1;
+        }
+        i {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+    }
+    li:nth-child(1) {
+        background-color: $azul;
+        border: $azul 2px solid;
+        transition: background-color 1s ease;
+        &:hover {
+            background-color: $blanco;
+            border: $azul 2px solid;
+            a {
+                color: $azul;
+            }
+        }
+    }
+    li:nth-child(2) {
+        background-color: $rosa;
+        border: $rosa 2px solid;
+        transition: background-color 1s ease;
+        &:hover {
+            background-color: $blanco;
+            border: $rosa 2px solid;
+            a {
+                color: $rosa;
+            }
+        }
+    }
+    li:nth-child(3) {
+        background-color: $morado;
+        border: $morado 2px solid;
+        transition: background-color 1s ease;
+        &:hover {
+            background-color: $blanco;
+            border: $morado 2px solid;
+            a {
+                color: $morado;
+            }
+        }
+    }
+    li:nth-child(4) {
+        background-color: $amarillo;
+        border: $amarillo 2px solid;
+        transition: background-color 1s ease;
+        &:hover {
+            background-color: $blanco;
+            border: $amarillo 2px solid;
+            a {
+                color: $amarillo;
+            }
+        }
+    }
+
+    li a {
+        color: $blanco;
+        font-size: 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-decoration: none;
+    }
+
+}
+
+/* ***** Footer ***** */
+.footer {
+    background-color: $azul;
+    padding-top: 1rem;
+    color: $blanco;
+    h2 {
+        text-transform: uppercase;
+    }
+    .contenedor {
+        @include tablet {
+            display: flex;
+        }
+    }
+    .entradas {
+        li {
+            list-style: none;
+            text-align: center;
+            margin-bottom: .5rem;
+            a {
+                text-decoration: none;
+                span {
+                    color: $blanco;
+                }
+                &:hover {
+                    text-decoration: underline;
+                    text-decoration-color: $blanco;
+                    background-color: $gris;
+                    border-radius: 5px;
+                    padding: .5rem .5rem;
+                    span {
+                        color: $azul;
+                    }
+                }
+            }
+        }
+    }
+    .caja {
+        @include tablet {
+            flex: 1px;
+        }
+    }
+    .copyright {
+        background-color: #004d70;
+        margin: 2rem 0 0 0;
+        padding: 1rem 0;
+        text-align: center;
+    }
+}
+
+.sociales ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    li {
+        margin-right: 1rem;
+        a {
+            text-decoration: none;
+        }
+    }
+    li span {
+        display: none;
+    }
+    li a:before {
+        color: $blanco;
+        font-family: "Font Awesome 5 Brands";
+        font-size: 2rem;
+    }
+    li a[href*='facebook.com']::before {
+        content: "\f39e";
+    }
+    li a[href*='twitter.com']::before {
+        content: "\f099";
+    }
+    li a[href*='youtube.com']::before {
+        content: "\f167";
+    }
+    li a[href*='instagram.com']::before {
+        content: "\f16d";
+    }
+    li a[href*='pinterest.com']::before {
+        content: "\f0d2";
+    }
+}
